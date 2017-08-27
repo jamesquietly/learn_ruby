@@ -112,13 +112,11 @@ end
 def translate string
     result = []
     string = string.split(" ")
-    if string.length > 1
-        string.each do |x|
-            result << pig_latin(x)
-        end
-    else
-        result << pig_latin(string[0])
+
+    string.each do |x|
+        result << pig_latin(x)
     end
+    
     result.join(" ").strip
 end
 
